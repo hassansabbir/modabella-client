@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       theme: "Lobster Two",
+      description: "Ysabeau SC",
     },
     extend: {},
   },
