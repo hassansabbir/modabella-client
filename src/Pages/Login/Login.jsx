@@ -53,7 +53,9 @@ const Login = () => {
               <SocialLogin />
               <p className="text-center text-xl">
                 New To ModaBella?{" "}
-                <Link className="underline font-bold">Register Now</Link>
+                <Link to="/signUp" className="underline font-bold">
+                  Register Now
+                </Link>
               </p>
             </div>
           </div>

@@ -4,19 +4,19 @@ const Navbar = () => {
   const navOptions = (
     <>
       <li>
-        <a>Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a>Mens</a>
+        <Link>Mens</Link>
       </li>
       <li>
-        <a>Womans</a>
+        <Link>Womans</Link>
       </li>
       <li>
-        <a>Children</a>
+        <Link>Children</Link>
       </li>
       <li>
-        <a>About Us</a>
+        <Link>About Us</Link>
       </li>
     </>
   );
