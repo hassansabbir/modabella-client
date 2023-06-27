@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </footer>
       <hr />
-      <footer className="footer footer-center p-4 bg-neutral text-neutral-content">
+      <footer className="footer footer-center p-4 bg-base-200 text-neutral">
         <div>
           <p>Copyright © 2023 - All right reserved by Mahmud Hasan Sabbir</p>
         </div>
