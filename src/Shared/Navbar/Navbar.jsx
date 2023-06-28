@@ -22,6 +22,9 @@ const Navbar = () => {
       <li>
         <Link>About Us</Link>
       </li>
+      <li>
+        <Link>Dashboard</Link>
+      </li>
     </>
   );
 
@@ -58,9 +61,9 @@ const Navbar = () => {
             {navOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-3xl font-theme">
+        <Link to="/" className="btn btn-ghost normal-case text-3xl font-theme">
           ModaBella
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-xl px-1">{navOptions}</ul>
