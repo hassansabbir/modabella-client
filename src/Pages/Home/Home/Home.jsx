@@ -2,6 +2,7 @@ import Banner from "../Banner/Banner";
 import Discount from "../Discount/Discount";
 import Features from "../Features/Features";
 import Review from "../Review/Review";
+import Sponsors from "../Sponsors/Sponsors";
 import NewCollection from "../newCollection/newCollection";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <NewCollection />
       <Review />
       <Discount />
+      <Sponsors />
     </div>
   );
 };
