@@ -3,8 +3,8 @@ import newShoes from "../../../assets/newCollection.png";
 
 const NewCollection = () => {
   return (
-    <div className="md:flex gap-3 flex-w justify-center mb-20 max-w-7xl mx-auto">
-      <div className="md:flex md:w-6/12 p-5 justify-end items-center border">
+    <div className="md:flex gap-3 pb-10 flex-w justify-center mb-20 max-w-7xl mx-auto">
+      <div className="md:flex md:w-6/12 rounded-2xl hover:shadow-lg p-5 justify-end items-center border">
         <img
           className="w-7/12"
           src="https://img.freepik.com/free-photo/portrait-young-stylish-girl-model-casual-summer-clothes-brown-hat-with-natural-makeup-glasses-isolated_158538-8561.jpg?w=2000"
@@ -28,7 +28,7 @@ const NewCollection = () => {
         </div>
       </div>
       <div className="md:flex md:w-6/12 gap-3 flex-col">
-        <div className="md:flex items-center p-5 justify-center border">
+        <div className="md:flex items-center rounded-2xl hover:shadow-lg p-5 justify-center border">
           <div>
             <h2 className="text-lg font-description">New Season</h2>
             <h2 className="text-4xl font-bold">
@@ -43,16 +43,16 @@ const NewCollection = () => {
             </a>
           </div>
           <img
-            className="w-3/12"
-            src="https://img.freepik.com/free-photo/closeup-portrait-young-male-wearing-warm-striped-sweater-posing-against-white-wall_181624-37576.jpg?w=740&t=st=1687964078~exp=1687964678~hmac=e5202309eaaff6eb5b2b35dcdb8685d3d181642f7451b2f8def0606f53f209a4"
+            className="w-6/12 rounded-xl"
+            src="https://img.freepik.com/free-photo/retro-man-dressed-shirt-lies-floor-posing_171337-9906.jpg?w=1380&t=st=1688002476~exp=1688003076~hmac=313945953a2c26d4c97f12acf163c49800b15b0c97394ef020af6215558b971b"
             alt=""
           />
         </div>
-        <div className="md:flex items-center border bg-red-100 justify-center p-5">
+        <div className="md:flex items-center rounded-2xl hover:shadow-lg border bg-red-100 justify-center p-5">
           <div>
             <h2 className="text-lg font-description">New Season</h2>
             <h2 className="text-4xl font-bold">
-              The latest men's <br /> trends this season
+              Show your fashion <br /> With christmas shoes.
             </h2>
             <p className="text-xl my-5">Don't miss this opportunity.</p>
             <a
