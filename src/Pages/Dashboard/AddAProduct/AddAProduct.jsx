@@ -14,10 +14,21 @@ const AddAProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log(data);
+    const availableProducts = parseFloat(data.availableProducts);
+    const price = parseFloat(data.price);
+    const ratings = parseFloat(data.ratings);
+    const addedProduct = {
+      ...data,
+      availableProducts,
+      price,
+      ratings,
+      status: "pending",
+    };
     fetch(`${import.meta.env.VITE_SERVER_API}/products`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(addedProduct),
     })
       .then((res) => res.json())
       .then((data) => {
