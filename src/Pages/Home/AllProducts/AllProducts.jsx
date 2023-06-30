@@ -15,11 +15,15 @@ const AllProducts = () => {
       <h2 className="text-5xl font-description text-center mb-20">
         Browse All Products
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {products.map((product) => (
           <div key={product._id} className="card w-96 bg-base-100 shadow-xl">
             <figure>
-              <img src={product?.image} alt={product?.name} />
+              <img
+                className="w-full h-[550px]"
+                src={product?.image}
+                alt={product?.name}
+              />
             </figure>
             <div className="card-body">
               <h2 className="card-title text-3xl">{product?.name}</h2>

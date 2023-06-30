@@ -1,11 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
+        <div className="drawer-content bg-gray-200 flex flex-col items-center justify-center">
           <Outlet></Outlet>
           <label
             htmlFor="my-drawer-2"
@@ -19,29 +19,29 @@ const Dashboard = () => {
           <ul className="menu p-4 w-80 h-full bg-base-200 text-2xl font-bold text-base-content">
             {/* Sidebar content here */}
             <li>
-              <Link to="/">Back to Home</Link>
+              <NavLink to="/">Back to Home</NavLink>
             </li>
             <div className="divider" />
             <li>
-              <Link>My Cart</Link>
+              <NavLink to="myCart">My Cart</NavLink>
             </li>
             <li>
-              <Link>My Products</Link>
+              <NavLink to="myProducts">My Products</NavLink>
             </li>
             <li>
-              <Link>Payment History</Link>
+              <NavLink to="paymentHistory">Payment History</NavLink>
             </li>
             <li>
-              <Link to="addAProduct">Add Product</Link>
+              <NavLink to="addAProduct">Add Product</NavLink>
             </li>
             <li>
-              <Link>My Added Products</Link>
+              <NavLink to="myAddedProducts">My Added Products</NavLink>
             </li>
             <li>
-              <Link>Manage Users</Link>
+              <NavLink to="manageUsers">Manage Users</NavLink>
             </li>
             <li>
-              <Link>Manage Products</Link>
+              <NavLink to="manageProducts">Manage Products</NavLink>
             </li>
           </ul>
         </div>
