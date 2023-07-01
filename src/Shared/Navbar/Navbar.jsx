@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 fixed z-10 opacity-70">
+    <div className="navbar bg-base-100 fixed z-10 opacity-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,7 +68,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-xl px-1">{navOptions}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end space-x-3">
         <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
           {user && (
             <div className="avatar">

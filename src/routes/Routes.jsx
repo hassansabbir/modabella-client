@@ -7,6 +7,7 @@ import Dashboard from "../Layout/Dashboard";
 import AddAProduct from "../Pages/Dashboard/AddAProduct/AddAProduct";
 import PrivetRoute from "./PrivetRoute";
 import Details from "../Pages/Details/Details";
+import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: "addAProduct",
         element: <AddAProduct></AddAProduct>,
+      },
+      {
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>,
       },
     ],
   },
