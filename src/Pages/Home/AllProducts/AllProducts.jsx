@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -31,7 +32,9 @@ const AllProducts = () => {
                 <span className="font-extrabold">Price:</span> ${product?.price}
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-neutral">View Details</button>
+                <Link to={`/details/${product._id}`}>
+                  <button className="btn btn-neutral">View Details</button>
+                </Link>
               </div>
             </div>
           </div>

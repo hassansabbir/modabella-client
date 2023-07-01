@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import AddAProduct from "../Pages/Dashboard/AddAProduct/AddAProduct";
 import PrivetRoute from "./PrivetRoute";
+import Details from "../Pages/Details/Details";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_SERVER_API}/products/${params.id}`),
       },
       {
         path: "/login",
