@@ -1,9 +1,24 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useAdmin from "../../hooks/useAdmin";
+import useSeller from "../../hooks/useSeller";
+import useCustomer from "../../hooks/useCustomer";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+
+  const [isAdmin, isAdminLoading] = useAdmin();
+  const [isSeller, isSellerLoading] = useSeller();
+  const [isCustomer, isCustomerLoading] = useCustomer();
+
+  if (isAdminLoading || isSellerLoading || isCustomerLoading) {
+    return (
+      <div className="text-center mt-72">
+        <span className="loading  loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
 
   const navOptions = (
     <>
@@ -22,9 +37,27 @@ const Navbar = () => {
       <li>
         <Link>About Us</Link>
       </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
-      </li>
+      {isAdmin.admin && (
+        <>
+          <li className="text-xl font-semibold">
+            <Link to="/dashboard/manageUsers">Dashboard</Link>
+          </li>
+        </>
+      )}
+      {isSeller.seller && (
+        <>
+          <li className="text-xl font-semibold">
+            <Link to="/dashboard/addAProduct">Dashboard</Link>
+          </li>
+        </>
+      )}
+      {isCustomer.customer && (
+        <>
+          <li className="text-xl font-semibold">
+            <Link to="/dashboard/cart">Dashboard</Link>
+          </li>
+        </>
+      )}
     </>
   );
 

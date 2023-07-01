@@ -13,7 +13,7 @@ const Review = () => {
         consequuntur esse! Repellendus quia atque voluptatum cupiditate
         molestiae quo ducimus, nemo debitis.
       </p>
-      <div className="flex my-10">
+      <div className="md:flex my-10">
         <div className="text-center">
           <div className="flex justify-center">
             <FaStar className="w-7 h-7 text-orange-500" />
@@ -28,7 +28,7 @@ const Review = () => {
           </p>
           <h2 className="text-3xl my-5 font-bold">Teresa Holland</h2>
         </div>
-        <div className="divider divider-horizontal" />
+        <div className="divider md:divider-horizontal" />
         <div className="text-center">
           <div className="flex justify-center">
             <FaStar className="w-7 h-7 text-orange-500" />
@@ -43,7 +43,7 @@ const Review = () => {
           </p>
           <h2 className="text-3xl my-5 font-bold">Mahmud Hasan Sabbir</h2>
         </div>
-        <div className="divider divider-horizontal" />
+        <div className="divider md:divider-horizontal" />
         <div className="text-center">
           <div className="flex justify-center">
             <FaStar className="w-7 h-7 text-orange-500" />

@@ -48,8 +48,10 @@ const Details = () => {
         image: product.image,
         sellerName: product.sellerName,
         sellerEmail: product.sellerEmail,
-        quantity: quantity,
-        price: totalPrice,
+        quantity: parseFloat(quantity),
+        price: parseFloat(totalPrice),
+        email: user.email,
+        brand: product.brand,
       };
       fetch(`${import.meta.env.VITE_SERVER_API}/carts`, {
         method: "POST",

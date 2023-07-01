@@ -2,8 +2,11 @@ import { NavLink, Outlet } from "react-router-dom";
 import useCustomer from "../hooks/useCustomer";
 import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Dashboard = () => {
+  const { user } = useContext(AuthContext);
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isCustomer, isCustomerLoading] = useCustomer();
   const [isSeller, isSellerLoading] = useSeller();
@@ -33,6 +36,13 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-base-200 text-2xl font-bold text-base-content">
             {/* Sidebar content here */}
+            <div>
+              <img className="rounded-full" src={user?.photoURL} alt="" />
+              <h2 className="text-3xl text-center mt-5">{user?.displayName}</h2>
+              <p className="text-center text-xl underline">{user?.email}</p>
+            </div>
+
+            <div className="divider mt-20" />
             <li>
               <NavLink to="/">Back to Home</NavLink>
             </li>
