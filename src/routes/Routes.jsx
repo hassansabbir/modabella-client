@@ -9,6 +9,7 @@ import PrivetRoute from "./PrivetRoute";
 import Details from "../Pages/Details/Details";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import Cart from "../Pages/Dashboard/Cart/Cart";
+import Payment from "../Pages/Dashboard/Cart/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "manageUsers",
         element: <ManageUsers></ManageUsers>,
+      },
+      {
+        path: "payment",
+        element: <Payment></Payment>,
       },
     ],
   },

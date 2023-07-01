@@ -50,7 +50,7 @@ const Dashboard = () => {
             {isCustomer.customer && (
               <>
                 <li>
-                  <NavLink to="myCart">My Cart</NavLink>
+                  <NavLink to="cart">My Cart</NavLink>
                 </li>
                 <li>
                   <NavLink to="myProducts">My Products</NavLink>
