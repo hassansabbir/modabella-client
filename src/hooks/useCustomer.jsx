@@ -8,7 +8,7 @@ const useCustomer = () => {
     queryKey: ["isCustomer", user?.email],
     queryFn: async () => {
       const response = await fetch(
-        `${import.meta.env.VITE_SERVER_API}/users/student/${user?.email}`,
+        `${import.meta.env.VITE_SERVER_API}/users/customer/${user?.email}`,
         {
           method: "GET",
         }

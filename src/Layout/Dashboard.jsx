@@ -1,6 +1,21 @@
 import { NavLink, Outlet } from "react-router-dom";
+import useCustomer from "../hooks/useCustomer";
+import useSeller from "../hooks/useSeller";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
+  const [isAdmin, isAdminLoading] = useAdmin();
+  const [isCustomer, isCustomerLoading] = useCustomer();
+  const [isSeller, isSellerLoading] = useSeller();
+  console.log(isAdmin, isCustomer, isSeller);
+  if (isAdminLoading || isCustomerLoading || isSellerLoading) {
+    return (
+      <div className="text-center mt-72">
+        <span className="loading  loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -22,27 +37,39 @@ const Dashboard = () => {
               <NavLink to="/">Back to Home</NavLink>
             </li>
             <div className="divider" />
-            <li>
-              <NavLink to="myCart">My Cart</NavLink>
-            </li>
-            <li>
-              <NavLink to="myProducts">My Products</NavLink>
-            </li>
-            <li>
-              <NavLink to="paymentHistory">Payment History</NavLink>
-            </li>
-            <li>
-              <NavLink to="addAProduct">Add Product</NavLink>
-            </li>
-            <li>
-              <NavLink to="myAddedProducts">My Added Products</NavLink>
-            </li>
-            <li>
-              <NavLink to="manageUsers">Manage Users</NavLink>
-            </li>
-            <li>
-              <NavLink to="manageProducts">Manage Products</NavLink>
-            </li>
+            {isCustomer.customer && (
+              <>
+                <li>
+                  <NavLink to="myCart">My Cart</NavLink>
+                </li>
+                <li>
+                  <NavLink to="myProducts">My Products</NavLink>
+                </li>
+                <li>
+                  <NavLink to="paymentHistory">Payment History</NavLink>
+                </li>
+              </>
+            )}
+            {isSeller.seller && (
+              <>
+                <li>
+                  <NavLink to="addAProduct">Add Product</NavLink>
+                </li>
+                <li>
+                  <NavLink to="myAddedProducts">My Added Products</NavLink>
+                </li>
+              </>
+            )}
+            {isAdmin.admin && (
+              <>
+                <li>
+                  <NavLink to="manageUsers">Manage Users</NavLink>
+                </li>
+                <li>
+                  <NavLink to="manageProducts">Manage Products</NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
