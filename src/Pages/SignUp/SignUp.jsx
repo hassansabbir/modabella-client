@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
-  const { createUser, logOut } = useContext(AuthContext);
+  const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const {
@@ -19,31 +19,51 @@ const SignUp = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    createUser(data.email, data.password)
-      .then((result) => {
-        const loggedUser = result.user;
-        console.log(loggedUser);
-        reset();
-        Swal.fire({
-          title: "User created successfully. Please login now.",
-          showClass: {
-            popup: "animate__animated animate__fadeInDown",
-          },
-          hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-          },
-        });
-        logOut()
-          .then(() => {
-            navigate("/login");
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+
+      updateUserProfile(data.name, data.photoUrl)
+        .then(() => {
+          const savedUserInfo = {
+            name: data.name,
+            image: data.photoUrl,
+            email: data.email,
+            role: "customer",
+          };
+          fetch(`${import.meta.env.VITE_SERVER_API}/users`, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(savedUserInfo),
           })
-          .catch((err) => {
-            console.log(err);
-          });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                console.log("user profile updated");
+                reset();
+                Swal.fire({
+                  title: "User created successfully. Please login now.",
+                  showClass: {
+                    popup: "animate__animated animate__fadeInDown",
+                  },
+                  hideClass: {
+                    popup: "animate__animated animate__fadeOutUp",
+                  },
+                });
+                logOut()
+                  .then(() => {
+                    navigate("/login");
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }
+            });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    });
   };
 
   return (
