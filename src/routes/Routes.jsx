@@ -13,6 +13,9 @@ import Payment from "../Pages/Dashboard/Cart/Payment/Payment";
 import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import ManageProducts from "../Pages/Dashboard/ManageProducts/ManageProducts";
+import Mens from "../Pages/Mens/Mens";
+import Womans from "../Pages/Womans/Womans";
+import Children from "../Pages/Children/Children";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +31,18 @@ export const router = createBrowserRouter([
         element: <Details></Details>,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_SERVER_API}/products/${params.id}`),
+      },
+      {
+        path: "/mens",
+        element: <Mens></Mens>,
+      },
+      {
+        path: "/womans",
+        element: <Womans></Womans>,
+      },
+      {
+        path: "/children",
+        element: <Children></Children>,
       },
       {
         path: "/login",

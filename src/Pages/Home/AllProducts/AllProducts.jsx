@@ -9,7 +9,9 @@ const AllProducts = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  console.log(products);
+  const approvedProducts = products.filter(
+    (product) => product.status === "approved"
+  );
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -17,7 +19,7 @@ const AllProducts = () => {
         Browse All Products
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {products.map((product) => (
+        {approvedProducts.map((product) => (
           <div key={product._id} className="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img

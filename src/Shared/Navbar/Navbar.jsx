@@ -26,13 +26,13 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link>Mens</Link>
+        <Link to="/mens">Mens</Link>
       </li>
       <li>
-        <Link>Womans</Link>
+        <Link to="/womans">Womans</Link>
       </li>
       <li>
-        <Link>Children</Link>
+        <Link to="/children">Children</Link>
       </li>
       <li>
         <Link>About Us</Link>
