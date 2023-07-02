@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../../Providers/AuthProvider";
-import "./paymentStyles.css";
 
 const CheckOutForm = ({ carts, price }) => {
   const { user } = useContext(AuthContext);
@@ -71,6 +70,7 @@ const CheckOutForm = ({ carts, price }) => {
       const payment = {
         user: user?.email,
         productName: carts.name,
+        image: carts.map((img) => img.image),
         transactionId: paymentIntent.id,
         itemsId: carts.map((item) => item._id),
         items: carts.map((itm) => itm.productName),

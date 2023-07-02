@@ -10,6 +10,9 @@ import Details from "../Pages/Details/Details";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import Payment from "../Pages/Dashboard/Cart/Payment/Payment";
+import MyProducts from "../Pages/Dashboard/MyProducts/MyProducts";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import ManageProducts from "../Pages/Dashboard/ManageProducts/ManageProducts";
 
 export const router = createBrowserRouter([
   {
@@ -49,12 +52,24 @@ export const router = createBrowserRouter([
         element: <Cart></Cart>,
       },
       {
+        path: "myProducts",
+        element: <MyProducts></MyProducts>,
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
+      },
+      {
         path: "addAProduct",
         element: <AddAProduct></AddAProduct>,
       },
       {
         path: "manageUsers",
         element: <ManageUsers></ManageUsers>,
+      },
+      {
+        path: "manageProducts",
+        element: <ManageProducts></ManageProducts>,
       },
       {
         path: "payment",
