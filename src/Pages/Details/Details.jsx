@@ -3,12 +3,17 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useAdmin from "../../hooks/useAdmin";
+import useSeller from "../../hooks/useSeller";
 
 const Details = () => {
   const { user } = useContext(AuthContext);
   const product = useLoaderData();
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [isAdmin] = useAdmin();
+  const [isSeller] = useSeller();
 
   const {
     name,
@@ -124,6 +129,7 @@ const Details = () => {
               </button>
             </div>
             <button
+              disabled={isAdmin?.admin === true || isSeller?.seller === true}
               onClick={handleAddToCart}
               className="text-xl bg-gray-700 text-white px-14 py-2"
             >
