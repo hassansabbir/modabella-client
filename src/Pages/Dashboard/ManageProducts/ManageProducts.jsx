@@ -59,7 +59,7 @@ const ManageProducts = () => {
   return (
     <div className="w-full">
       <h2 className="text-5xl font-display text-center my-20 font-semibold">
-        Manage All Added Classes
+        Manage All Added Products
       </h2>
       <table className="table">
         <thead>

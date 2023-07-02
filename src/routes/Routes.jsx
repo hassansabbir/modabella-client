@@ -16,6 +16,7 @@ import ManageProducts from "../Pages/Dashboard/ManageProducts/ManageProducts";
 import Mens from "../Pages/Mens/Mens";
 import Womans from "../Pages/Womans/Womans";
 import Children from "../Pages/Children/Children";
+import MyAddedProducts from "../Pages/Dashboard/MyAddedProducts/MyAddedProducts";
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "addAProduct",
         element: <AddAProduct></AddAProduct>,
+      },
+      {
+        path: "myAddedProducts",
+        element: <MyAddedProducts></MyAddedProducts>,
       },
       {
         path: "manageUsers",

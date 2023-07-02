@@ -13,7 +13,7 @@ const Womans = () => {
   const approvedProducts = products.filter(
     (product) => product.status === "approved"
   );
-  const mensProducts = approvedProducts.filter(
+  const womansProducts = approvedProducts.filter(
     (product) => product.clothingCategory === "Womans"
   );
 
@@ -28,7 +28,7 @@ const Womans = () => {
           make a lasting impression!
         </p>
         <div className="grid gap-10 grid-cols-1 my-20 md:grid-cols-3">
-          {mensProducts.map((product) => (
+          {womansProducts.map((product) => (
             <div key={product._id} className="card w-96 bg-base-100 shadow-xl">
               <figure>
                 <img
