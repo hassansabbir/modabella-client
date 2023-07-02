@@ -1,5 +1,6 @@
 import AllProducts from "../AllProducts/AllProducts";
 import Banner from "../Banner/Banner";
+import Countdown from "../Countdown/Countdown";
 import Discount from "../Discount/Discount";
 import Features from "../Features/Features";
 import Review from "../Review/Review";
@@ -13,6 +14,7 @@ const Home = () => {
       <Features />
       <NewCollection />
       <AllProducts />
+      <Countdown></Countdown>
       <Review />
       <Discount />
       <Sponsors />
