@@ -45,6 +45,9 @@ const Cart = () => {
 
   return (
     <div className="w-full p-10">
+      <Helmet>
+        <title>My Cart - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-description">This is Cart.</h2>
       <h2 className="text-3xl text-center my-5">
         Total Items On Cart: {carts.length}

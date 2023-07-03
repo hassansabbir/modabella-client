@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const ManageUsers = () => {
@@ -52,6 +53,9 @@ const ManageUsers = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>Manage Users - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-description">
         Manage All The Users
       </h2>

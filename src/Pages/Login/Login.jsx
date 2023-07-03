@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import "./Login.css";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -39,6 +40,9 @@ const Login = () => {
 
   return (
     <div className="loginPage">
+      <Helmet>
+        <title>Login - ModaBella</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col ml-auto mr-20">
           <div className="text-center">

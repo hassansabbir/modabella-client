@@ -4,6 +4,7 @@ import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
@@ -21,6 +22,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Dashboard - ModaBella</title>
+      </Helmet>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content bg-gray-100 flex flex-col items-center justify-center">

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const MyAddedProducts = () => {
   const { user } = useContext(AuthContext);
@@ -17,6 +18,9 @@ const MyAddedProducts = () => {
 
   return (
     <div className="max-w-7xl">
+      <Helmet>
+        <title>My Added Products - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-description">
         My Added Products {products.length}
       </h2>

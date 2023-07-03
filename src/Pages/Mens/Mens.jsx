@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Mens = () => {
@@ -18,6 +19,9 @@ const Mens = () => {
 
   return (
     <div className="pt-24">
+      <Helmet>
+        <title>Men - ModaBella</title>
+      </Helmet>
       <img
         className="w-full"
         src="https://image.etashee.com/images/category/men/men-banner.jpg"

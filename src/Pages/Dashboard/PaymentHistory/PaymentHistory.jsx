@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import { Helmet } from "react-helmet-async";
 
 const PaymentHistory = () => {
   const [payments, setPayments] = useState([]);
@@ -13,6 +14,9 @@ const PaymentHistory = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>Payment History - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-description">Payment History</h2>
       <div className="overflow-x-auto">
         <table className="table">

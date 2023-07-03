@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Banner from "./Banner/Banner";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Womans = () => {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,9 @@ const Womans = () => {
 
   return (
     <div className="pt-24">
+      <Helmet>
+        <title>Womans - ModaBella</title>
+      </Helmet>
       <Banner></Banner>
       <div className="max-w-7xl mx-auto">
         <p className="my-20 text-3xl text-center font-description">

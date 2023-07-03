@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddAProduct = () => {
   const { user } = useContext(AuthContext);
@@ -47,6 +48,9 @@ const AddAProduct = () => {
 
   return (
     <div className="w-9/12 my-20 ">
+      <Helmet>
+        <title>Add Product - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center font-description">Add A Product</h2>
       <p className="text-2xl text-center my-10">
         Welcome to the 'Add Product' page! This is where you can showcase your

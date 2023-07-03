@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAdmin from "../../hooks/useAdmin";
 import useSeller from "../../hooks/useSeller";
+import { Helmet } from "react-helmet-async";
 
 const Details = () => {
   const { user } = useContext(AuthContext);
@@ -96,6 +97,9 @@ const Details = () => {
 
   return (
     <div className="max-w-7xl mx-auto py-40 p-20">
+      <Helmet>
+        <title>Product Details - ModaBella</title>
+      </Helmet>
       <div className="flex gap-10">
         <img className="w-5/12" src={image} alt="" />
         <div>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const MyProducts = () => {
   const [myPurchased, setMyPurchased] = useState([]);
@@ -12,6 +13,9 @@ const MyProducts = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>My Products - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl text-center my-10  font-description">
         My Purchased Products {myPurchased.length}
       </h2>

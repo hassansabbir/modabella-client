@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
@@ -68,6 +69,9 @@ const SignUp = () => {
 
   return (
     <div className="signUpPage">
+      <Helmet>
+        <title>Sign Up - ModaBella</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col mr-auto">
           <div className="text-center">

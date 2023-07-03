@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -58,6 +59,9 @@ const ManageProducts = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>Manage Products - ModaBella</title>
+      </Helmet>
       <h2 className="text-5xl font-display text-center my-20 font-semibold">
         Manage All Added Products
       </h2>
