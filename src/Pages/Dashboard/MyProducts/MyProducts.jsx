@@ -1,14 +1,16 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const MyProducts = () => {
+  const { user } = useContext(AuthContext);
   const [myPurchased, setMyPurchased] = useState([]);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER_API}/payments`)
+      .get(`${import.meta.env.VITE_SERVER_API}/myPayments/${user?.email}`)
       .then((data) => setMyPurchased(data.data));
-  }, []);
+  }, [user?.email]);
   console.log(myPurchased);
 
   return (

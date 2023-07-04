@@ -1,28 +1,30 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import moment from "moment";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const PaymentHistory = () => {
+  const { user } = useContext(AuthContext);
   const [payments, setPayments] = useState([]);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER_API}/payments`)
+      .get(`${import.meta.env.VITE_SERVER_API}/myPayments/${user?.email}`)
       .then((data) => setPayments(data.data));
-  }, []);
+  }, [user?.email]);
   console.log(payments);
 
   return (
-    <div className="w-full">
+    <div className="max-w-7xl ">
       <Helmet>
         <title>Payment History - ModaBella</title>
       </Helmet>
       <h2 className="text-5xl text-center font-description">Payment History</h2>
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table text-2xl">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="text-2xl">
               <th>#</th>
               <th>Transaction Id</th>
               <th>Quantity</th>
@@ -38,7 +40,19 @@ const PaymentHistory = () => {
                 <td>{payment.transactionId}</td>
                 <td>{payment.quantity}</td>
                 <td>{payment.price}</td>
-                <td>{payment.status}</td>
+                {payment.status === "purchased" ? (
+                  <td>
+                    <button className="btn bg-green-400 btn-sm">
+                      {payment.status}
+                    </button>
+                  </td>
+                ) : (
+                  <td>
+                    <button className="btn bg-red-400 btn-sm">
+                      {payment.status}
+                    </button>
+                  </td>
+                )}
                 <td>{moment(payment.date).format("LLL")}</td>
               </tr>
             ))}
