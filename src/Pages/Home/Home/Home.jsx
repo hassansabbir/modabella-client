@@ -18,11 +18,11 @@ const Home = () => {
       <Banner />
       <Features />
       <NewCollection />
+      <Countdown></Countdown>
+      <Discount />
       <Category></Category>
       <AllProducts />
-      <Countdown></Countdown>
       <Review />
-      <Discount />
       <Sponsors />
     </div>
   );

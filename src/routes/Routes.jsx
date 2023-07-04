@@ -17,6 +17,7 @@ import Mens from "../Pages/Mens/Mens";
 import Womans from "../Pages/Womans/Womans";
 import Children from "../Pages/Children/Children";
 import MyAddedProducts from "../Pages/Dashboard/MyAddedProducts/MyAddedProducts";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
   },
   {
     path: "/dashboard",
