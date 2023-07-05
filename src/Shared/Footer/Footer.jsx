@@ -9,7 +9,7 @@ const Footer = () => {
           <p className="text-xl">
             ModaBella Ltd.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech since 2023
           </p>
         </div>
         <div>
