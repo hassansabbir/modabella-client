@@ -4,6 +4,16 @@ import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import {
+  FaCalendarAlt,
+  FaHome,
+  FaListAlt,
+  FaMoneyBillAlt,
+  FaShoppingBag,
+  FaShoppingCart,
+  FaUsers,
+} from "react-icons/fa";
+import { BsFillBagCheckFill } from "react-icons/bs";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
@@ -44,39 +54,55 @@ const Dashboard = () => {
 
             <div className="divider mt-20" />
             <li>
-              <NavLink to="/">Back to Home</NavLink>
+              <NavLink to="/">
+                <FaHome /> Back to Home
+              </NavLink>
             </li>
             <div className="divider" />
             {isCustomer.customer && (
               <>
                 <li>
-                  <NavLink to="cart">My Cart</NavLink>
+                  <NavLink to="cart">
+                    <FaShoppingCart /> My Cart
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="myProducts">My Products</NavLink>
+                  <NavLink to="myProducts">
+                    <FaShoppingBag /> My Products
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="paymentHistory">Payment History</NavLink>
+                  <NavLink to="paymentHistory">
+                    <FaMoneyBillAlt /> Payment History
+                  </NavLink>
                 </li>
               </>
             )}
             {isSeller.seller && (
               <>
                 <li>
-                  <NavLink to="addAProduct">Add Product</NavLink>
+                  <NavLink to="addAProduct">
+                    <FaCalendarAlt /> Add Product
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="myAddedProducts">My Added Products</NavLink>
+                  <NavLink to="myAddedProducts">
+                    <BsFillBagCheckFill /> My Added Products
+                  </NavLink>
                 </li>
               </>
             )}
             {isAdmin.admin && (
               <>
                 <li>
-                  <NavLink to="manageUsers">Manage Users</NavLink>
+                  <NavLink to="manageUsers">
+                    <FaUsers /> Manage Users
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="manageProducts">Manage Products</NavLink>
+                  <NavLink to="manageProducts">
+                    <FaListAlt /> Manage Products
+                  </NavLink>
                 </li>
               </>
             )}
