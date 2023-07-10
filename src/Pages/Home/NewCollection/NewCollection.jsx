@@ -4,7 +4,11 @@ import newShoes from "../../../assets/newCollection.png";
 const NewCollection = () => {
   return (
     <div className="md:flex gap-3 pb-10 flex-w justify-center mb-20 max-w-7xl mx-auto">
-      <div className="md:flex md:w-6/12 rounded-2xl hover:shadow-lg p-5 justify-end items-center border">
+      <div
+        className="md:flex md:w-6/12 rounded-2xl hover:shadow-lg p-5 justify-end items-center border"
+        data-aos="flip-left"
+        data-aos-duration="1000"
+      >
         <img
           className="w-7/12"
           src="https://img.freepik.com/free-photo/portrait-young-stylish-girl-model-casual-summer-clothes-brown-hat-with-natural-makeup-glasses-isolated_158538-8561.jpg?w=2000"
@@ -27,7 +31,11 @@ const NewCollection = () => {
           </a>
         </div>
       </div>
-      <div className="md:flex md:w-6/12 gap-3 flex-col">
+      <div
+        className="md:flex md:w-6/12 gap-3 flex-col"
+        data-aos="flip-right"
+        data-aos-duration="1000"
+      >
         <div className="md:flex items-center rounded-2xl hover:shadow-lg p-5 justify-center border">
           <div>
             <h2 className="text-lg font-description">New Season</h2>

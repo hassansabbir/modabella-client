@@ -37,19 +37,35 @@ const Countdown = () => {
           quis?
         </p>
         <div className="md:flex p-10 space-y-10 justify-center text-3xl gap-10">
-          <div className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl">
+          <div
+            className=" flex flex-col mt-10 items-center bg-slate-200 shadow-xl p-5 rounded-3xl"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+          >
             <h2 className="">{days < 0 ? "0" + days : days}</h2>
             <span>Days</span>
           </div>
-          <div className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl">
+          <div
+            className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+          >
             <h2>{hours < 0 ? "0" + hours : hours}</h2>
             <span>Hours</span>
           </div>
-          <div className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl">
+          <div
+            className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+          >
             <h2>{mins < 0 ? "0" + mins : mins}</h2>
             <span>Minutes</span>
           </div>
-          <div className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl">
+          <div
+            className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+          >
             <h2>{secs < 0 ? "0" + secs : secs}</h2>
             <span>Seconds</span>
           </div>

@@ -26,6 +26,8 @@ const AllProducts = () => {
               <div
                 key={product._id}
                 className="card w-96 bg-base-100 shadow-xl"
+                data-aos="fade-up"
+                data-aos-duration="1000"
               >
                 <figure>
                   <img

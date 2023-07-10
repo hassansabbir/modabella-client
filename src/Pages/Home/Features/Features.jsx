@@ -4,7 +4,11 @@ const Features = () => {
       <h2 className="text-5xl my-10 font-description text-center">
         Our Features
       </h2>
-      <div className="md:flex gap-10 justify-center">
+      <div
+        className="md:flex gap-10 justify-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="flex items-center border hover:shadow-xl p-5 rounded-3xl gap-3">
           <img
             className="w-28"
