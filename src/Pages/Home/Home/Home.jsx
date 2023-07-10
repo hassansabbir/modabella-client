@@ -8,6 +8,7 @@ import Features from "../Features/Features";
 import Review from "../Review/Review";
 import Sponsors from "../Sponsors/Sponsors";
 import NewCollection from "../newCollection/newCollection";
+import Blogs from "../Blogs/Blogs";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <Category></Category>
       <AllProducts />
       <Review />
+      <Blogs></Blogs>
       <Sponsors />
     </div>
   );
