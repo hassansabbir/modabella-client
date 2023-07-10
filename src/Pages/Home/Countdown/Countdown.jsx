@@ -24,9 +24,9 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="my-20 flex items-center bg-red-50 gap-5">
-      <img className="w-6/12" src={img} alt="" />
-      <div className="w-4/12">
+    <div className="my-20 md:flex items-center bg-red-50 gap-5">
+      <img className="md:w-6/12 w-10/12" src={img} alt="" />
+      <div className="md:w-4/12 text-center">
         <h4 className="text-2xl font-description">Deal Of The Week</h4>
         <h2 className="text-5xl font-description">
           Roland Grand Mens And <br /> Womans Combo
@@ -36,7 +36,7 @@ const Countdown = () => {
           fugiat optio obcaecati nesciunt doloremque corporis, fuga culpa non
           quis?
         </p>
-        <div className="flex justify-center text-3xl gap-10">
+        <div className="md:flex p-10 space-y-10 justify-center text-3xl gap-10">
           <div className=" flex flex-col items-center bg-slate-200 shadow-xl p-5 rounded-3xl">
             <h2 className="">{days < 0 ? "0" + days : days}</h2>
             <span>Days</span>
