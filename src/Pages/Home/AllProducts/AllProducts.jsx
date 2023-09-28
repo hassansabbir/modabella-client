@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -21,32 +22,32 @@ const AllProducts = () => {
       </h2>
       {seeAll ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {approvedProducts.slice(0, 6).map((product) => (
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+            {approvedProducts.slice(0, 10).map((product) => (
               <div
                 key={product._id}
-                className="card w-96 bg-base-100 shadow-xl"
+                className="w-60 bg-base-100 rounded-2xl shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
                 <figure>
                   <img
-                    className="w-full h-[550px]"
+                    className="w-full rounded-t-2xl h-[350px]"
                     src={product?.image}
                     alt={product?.name}
                   />
                 </figure>
-                <div className="card-body">
-                  <h2 className="card-title text-3xl">{product?.name}</h2>
-                  <p className="text-2xl">
+                <div className="p-3">
+                  <h2 className="text-xl font-bold">{product?.name}</h2>
+                  <p className="text-lg">
                     <span className="font-extrabold">Price:</span> $
                     {product?.price}
                   </p>
-                  <div className="card-actions justify-end">
-                    <Link to={`/details/${product._id}`}>
-                      <button className="btn btn-neutral">View Details</button>
-                    </Link>
-                  </div>
+                  <Link to={`/details/${product._id}`}>
+                    <p className="text-xl flex justify-end items-center hover:underline my-2 gap-2 font-extrabold">
+                      View Details <FaExternalLinkAlt />{" "}
+                    </p>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -61,27 +62,32 @@ const AllProducts = () => {
           </div>
         </>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           {approvedProducts.map((product) => (
-            <div key={product._id} className="card w-96 bg-base-100 shadow-xl">
+            <div
+              key={product._id}
+              className="w-60 bg-base-100 rounded-2xl shadow-xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <figure>
                 <img
-                  className="w-full h-[550px]"
+                  className="w-full rounded-t-2xl h-[350px]"
                   src={product?.image}
                   alt={product?.name}
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title text-3xl">{product?.name}</h2>
-                <p className="text-2xl">
+              <div className="p-3">
+                <h2 className="text-xl font-bold">{product?.name}</h2>
+                <p className="text-lg">
                   <span className="font-extrabold">Price:</span> $
                   {product?.price}
                 </p>
-                <div className="card-actions justify-end">
-                  <Link to={`/details/${product._id}`}>
-                    <button className="btn btn-neutral">View Details</button>
-                  </Link>
-                </div>
+                <Link to={`/details/${product._id}`}>
+                  <p className="text-xl flex justify-end items-center hover:underline my-2 gap-2 font-extrabold">
+                    View Details <FaExternalLinkAlt />{" "}
+                  </p>
+                </Link>
               </div>
             </div>
           ))}
