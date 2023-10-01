@@ -102,27 +102,35 @@ const Navbar = () => {
         <ul className="menu menu-horizontal text-xl px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end space-x-3">
-        <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-          {user && (
-            <div className="avatar">
-              <div className="w-10 rounded-full ">
-                <img src={user?.photoURL} />
-              </div>
-            </div>
-          )}
-        </div>
-        {user?.email ? (
-          <>
-            <button onClick={handleLogOut} className="btn btn-active btn-ghost">
-              Logout
-            </button>
-          </>
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0}>
+              {user && (
+                <div className="avatar">
+                  <div className="w-12 cursor-pointer rounded-full ">
+                    <img src={user?.photoURL} />
+                  </div>
+                </div>
+              )}
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="text-xl">Item 1</a>
+              </li>
+              <li>
+                <a onClick={handleLogOut} className="text-xl">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
         ) : (
-          <>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </>
+          <p className="text-xl font-bold">
+            <Link to="/login">Login</Link>
+          </p>
         )}
       </div>
     </div>

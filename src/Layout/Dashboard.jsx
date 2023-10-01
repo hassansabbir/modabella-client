@@ -2,8 +2,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import useCustomer from "../hooks/useCustomer";
 import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
-import { useContext } from "react";
-import { AuthContext } from "../Providers/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../Providers/AuthProvider";
 import {
   FaCalendarAlt,
   FaHome,
@@ -16,7 +16,7 @@ import {
 import { BsFillBagCheckFill } from "react-icons/bs";
 
 const Dashboard = () => {
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isCustomer, isCustomerLoading] = useCustomer();
   const [isSeller, isSellerLoading] = useSeller();
