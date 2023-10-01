@@ -46,13 +46,9 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-base-500 text-2xl font-bold text-base-content">
             {/* Sidebar content here */}
-            <div>
-              <img className="rounded-full" src={user?.photoURL} alt="" />
-              <h2 className="text-3xl text-center mt-5">{user?.displayName}</h2>
-              <p className="text-center text-xl underline">{user?.email}</p>
-            </div>
-
-            <div className="divider mt-20" />
+            <p className="font-theme text-5xl mx-auto mb-10 font-bold">
+              ModaBella
+            </p>
             <li>
               <NavLink to="/">
                 <FaHome /> Back to Home
