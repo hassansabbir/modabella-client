@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./swiperStyles.css";
 import "swiper/css";
+import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import slider1 from "../../../assets/slider1.jpg";
 import slider2 from "../../../assets/slider2.jpg";
@@ -12,7 +14,20 @@ import slider4 from "../../../assets/slider4.jpg";
 const Banner = () => {
   return (
     <div className="pt-20">
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
         <SwiperSlide className="relative">
           <img src={slider1} alt="" />
           <div className="absolute top-1/2 md:top-2/4 z-10 left-20">

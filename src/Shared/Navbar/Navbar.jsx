@@ -107,7 +107,7 @@ const Navbar = () => {
             <label tabIndex={0}>
               {user && (
                 <div className="avatar">
-                  <div className="w-12 cursor-pointer rounded-full ">
+                  <div className="w-12 me-5 cursor-pointer rounded-full ">
                     <img src={user?.photoURL} />
                   </div>
                 </div>
