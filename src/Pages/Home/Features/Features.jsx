@@ -5,7 +5,7 @@ const Features = () => {
         Our Features
       </h2>
       <div
-        className="md:flex gap-10 justify-center"
+        className="md:flex gap-10 px-5 justify-center"
         data-aos="fade-up"
         data-aos-duration="1000"
       >

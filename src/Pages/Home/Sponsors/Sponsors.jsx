@@ -9,7 +9,7 @@ const Sponsors = () => {
   return (
     <div className="my-20">
       <div className="divider w-11/12 mx-auto" />
-      <div className="md:flex justify-center gap-20">
+      <div className="md:flex space-y-5 lg:space-y-0 lg:justify-center mx-auto gap-20">
         <img
           className="w-28 hover:grayscale-0 grayscale transition duration-300"
           src={logo1}

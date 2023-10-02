@@ -70,11 +70,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
           <img src={slider3} alt="" />
-          <div className="absolute top-1/2 md:top-2/4 z-10 left-20">
-            <h2 className="md:text-7xl text-left font-description">
+          <div className="absolute top-1/2 md:top-2/4 z-10 left-10 lg:left-20">
+            <h2 className="md:text-7xl text-xs text-left font-description">
               ModaBella
             </h2>
-            <p className="md:text-2xl text-left font-description w-6/12">
+            <p className="md:text-2xl text-xs text-left font-description w-6/12">
               Unleash Your Fashion Potential at ModaBella! Explore curated
               collections, find your perfect look, and embrace your unique
               style. Elevate your wardrobe with must-have fashion essentials.

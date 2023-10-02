@@ -26,7 +26,7 @@ const AllProducts = () => {
             {approvedProducts.slice(0, 10).map((product) => (
               <div
                 key={product._id}
-                className="w-60 bg-base-100 rounded-2xl shadow-xl"
+                className="lg:w-60 w-80 bg-base-100 rounded-2xl mx-auto shadow-xl"
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
