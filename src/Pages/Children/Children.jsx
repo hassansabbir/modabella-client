@@ -29,7 +29,7 @@ const Children = () => {
         alt=""
       />
       <div className="max-w-7xl mx-auto">
-        <p className="text-3xl text-center font-description my-20">
+        <p className="text-2xl lg:text-3xl px-5 text-center font-description my-20">
           Discover Fashion Fun for Kids: Explore our delightful collection of
           children's wear. From cute one sides to stylish outfits, we offer a
           wide range of trendy and comfortable clothing for your little ones.
@@ -42,7 +42,7 @@ const Children = () => {
           {childrenProducts.map((product) => (
             <div
               key={product._id}
-              className="w-60 bg-base-100 rounded-2xl shadow-xl"
+              className="lg:w-60 w-80 mx-auto bg-base-100 rounded-2xl shadow-xl"
               data-aos="fade-up"
               data-aos-duration="1000"
             >

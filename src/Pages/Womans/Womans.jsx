@@ -26,7 +26,7 @@ const Womans = () => {
       </Helmet>
       <Banner></Banner>
       <div className="max-w-7xl mx-auto">
-        <p className="my-20 text-3xl text-center font-description">
+        <p className="lg:my-20 my-10 text-2xl lg:text-3xl text-center font-description">
           Step into Style: Explore our versatile women's wear collection for
           every occasion. From elegant dresses to chic tops and bottoms, find
           the perfect pieces to express your unique personality. Shop now and
@@ -36,7 +36,7 @@ const Womans = () => {
           {womansProducts.map((product) => (
             <div
               key={product._id}
-              className="w-60 bg-base-100 rounded-2xl shadow-xl"
+              className=" lg:w-60 w-80 mx-auto bg-base-100 rounded-2xl shadow-xl"
               data-aos="fade-up"
               data-aos-duration="1000"
             >

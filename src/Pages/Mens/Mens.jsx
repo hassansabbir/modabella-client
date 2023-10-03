@@ -29,7 +29,7 @@ const Mens = () => {
         alt=""
       />
       <div className="max-w-7xl mx-auto">
-        <p className="my-20 text-3xl text-center font-description">
+        <p className="lg:my-20 my-10 px-5 text-2xl lg:text-3xl text-center font-description">
           Discover the latest trends and timeless classics in our men's wear
           collection. From stylish shirts and comfortable t-shirts to rugged
           denim jeans and elegant suits, we offer a wide range of high-quality
@@ -45,7 +45,7 @@ const Mens = () => {
           {mensProducts.map((product) => (
             <div
               key={product._id}
-              className="w-60 bg-base-100 rounded-2xl shadow-xl"
+              className="lg:w-60 w-80 bg-base-100 mx-auto rounded-2xl shadow-xl"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
