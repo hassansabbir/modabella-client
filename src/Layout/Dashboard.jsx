@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useCustomer from "../hooks/useCustomer";
 import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
+import { Bars } from "react-loader-spinner";
 // import { useContext } from "react";
 // import { AuthContext } from "../Providers/AuthProvider";
 import {
@@ -23,8 +24,16 @@ const Dashboard = () => {
   console.log(isAdmin, isCustomer, isSeller);
   if (isAdminLoading || isCustomerLoading || isSellerLoading) {
     return (
-      <div className="text-center mt-72">
-        <span className="loading  loading-spinner loading-lg"></span>
+      <div className="flex justify-center mt-72">
+        <Bars
+          height="80"
+          width="80"
+          color="blue"
+          ariaLabel="bars-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
       </div>
     );
   }
