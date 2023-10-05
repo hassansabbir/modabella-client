@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import { Bars } from "react-loader-spinner";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const PrivetRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
@@ -9,14 +9,17 @@ const PrivetRoute = ({ children }) => {
   if (loading) {
     return (
       <div className="flex justify-center mt-72">
-        <Bars
-          height="80"
-          width="80"
+        <CirclesWithBar
+          height="100"
+          width="100"
           color="blue"
-          ariaLabel="bars-loading"
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
+          outerCircleColor=""
+          innerCircleColor=""
+          barColor=""
+          ariaLabel="circles-with-bar-loading"
         />
       </div>
     );

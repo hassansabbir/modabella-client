@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
 import useSeller from "../../hooks/useSeller";
 import useCustomer from "../../hooks/useCustomer";
-import { Bars } from "react-loader-spinner";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,14 +16,17 @@ const Navbar = () => {
   if (isAdminLoading || isSellerLoading || isCustomerLoading) {
     return (
       <div className="flex bg-white justify-center mt-72">
-        <Bars
-          height="80"
-          width="80"
+        <CirclesWithBar
+          height="100"
+          width="100"
           color="blue"
-          ariaLabel="bars-loading"
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
+          outerCircleColor=""
+          innerCircleColor=""
+          barColor=""
+          ariaLabel="circles-with-bar-loading"
         />
       </div>
     );
