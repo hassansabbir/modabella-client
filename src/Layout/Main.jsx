@@ -7,7 +7,9 @@ const Main = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="min-h-[1000px]">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
       <ScrollRestoration />
     </div>
