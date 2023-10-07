@@ -18,6 +18,7 @@ import Womans from "../Pages/Womans/Womans";
 import Children from "../Pages/Children/Children";
 import MyAddedProducts from "../Pages/Dashboard/MyAddedProducts/MyAddedProducts";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/children",
         element: <Children></Children>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/login",

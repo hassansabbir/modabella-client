@@ -47,7 +47,7 @@ const Navbar = () => {
         <Link to="/children">Children</Link>
       </li>
       <li>
-        <Link>About Us</Link>
+        <Link to="/about">About Us</Link>
       </li>
       {isAdmin.admin && (
         <>
