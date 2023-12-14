@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useCustomer from "../hooks/useCustomer";
 import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
-import { CirclesWithBar } from "react-loader-spinner";
+import { Vortex } from "react-loader-spinner";
 // import { useContext } from "react";
 // import { AuthContext } from "../Providers/AuthProvider";
 import {
@@ -25,17 +25,14 @@ const Dashboard = () => {
   if (isAdminLoading || isCustomerLoading || isSellerLoading) {
     return (
       <div className="flex justify-center mt-72">
-        <CirclesWithBar
-          height="100"
-          width="100"
-          color="blue"
-          wrapperStyle={{}}
-          wrapperClass=""
+        <Vortex
           visible={true}
-          outerCircleColor=""
-          innerCircleColor=""
-          barColor=""
-          ariaLabel="circles-with-bar-loading"
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={["red", "green", "blue", "yellow", "orange", "purple"]}
         />
       </div>
     );

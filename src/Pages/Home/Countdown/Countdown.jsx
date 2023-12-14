@@ -8,7 +8,7 @@ const Countdown = () => {
   const [mins, setMins] = useState(0);
   const [secs, setSecs] = useState(0);
 
-  const deadline = "October 31, 2023";
+  const deadline = "February 14, 2024";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();

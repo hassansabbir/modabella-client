@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
 import useSeller from "../../hooks/useSeller";
 import useCustomer from "../../hooks/useCustomer";
-import { CirclesWithBar } from "react-loader-spinner";
+import { Vortex } from "react-loader-spinner";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,17 +16,14 @@ const Navbar = () => {
   if (isAdminLoading || isSellerLoading || isCustomerLoading) {
     return (
       <div className="flex bg-white justify-center mt-72">
-        <CirclesWithBar
-          height="100"
-          width="100"
-          color="blue"
-          wrapperStyle={{}}
-          wrapperClass=""
+        <Vortex
           visible={true}
-          outerCircleColor=""
-          innerCircleColor=""
-          barColor=""
-          ariaLabel="circles-with-bar-loading"
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={["red", "green", "blue", "yellow", "orange", "purple"]}
         />
       </div>
     );
@@ -118,9 +115,12 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0}>
               {user && (
-                <div className="avatar">
-                  <div className="w-12 me-5 cursor-pointer rounded-full ">
-                    <img src={user?.photoURL} />
+                <div className="flex gap-3 cursor-pointer items-center border-4 rounded-full ps-5 p-1">
+                  <h2>{user?.displayName}</h2>
+                  <div className="avatar">
+                    <div className="w-10 rounded-full ">
+                      <img src={user?.photoURL} />
+                    </div>
                   </div>
                 </div>
               )}

@@ -41,8 +41,10 @@ const Banner = () => {
               Shop now and redefine your fashion story!
             </p>
             <div className="text-left space-x-5">
-              <button className="btn btn-outline mt-5 px-10">Buy now!</button>
-              <button className="btn btn-outline mt-5 px-10">
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
+                Buy now!
+              </button>
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
                 Watch Our Blogs
               </button>
             </div>
@@ -61,8 +63,10 @@ const Banner = () => {
               Shop now and redefine your fashion story!
             </p>
             <div className="text-left space-x-5">
-              <button className="btn btn-outline mt-5 px-10">Buy now!</button>
-              <button className="btn btn-outline mt-5 px-10">
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
+                Buy now!
+              </button>
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
                 Watch Our Blogs
               </button>
             </div>
@@ -81,8 +85,10 @@ const Banner = () => {
               Shop now and redefine your fashion story!
             </p>
             <div className="text-left space-x-5">
-              <button className="btn btn-outline mt-5 px-10">Buy now!</button>
-              <button className="btn btn-outline mt-5 px-10">
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
+                Buy now!
+              </button>
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
                 Watch Our Blogs
               </button>
             </div>
@@ -101,8 +107,10 @@ const Banner = () => {
               Shop now and redefine your fashion story!
             </p>
             <div className="text-left space-x-5">
-              <button className="btn btn-outline mt-5 px-10">Buy now!</button>
-              <button className="btn btn-outline mt-5 px-10">
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
+                Buy now!
+              </button>
+              <button className="btn btn-outline shadow-xl mt-5 px-10">
                 Watch Our Blogs
               </button>
             </div>
