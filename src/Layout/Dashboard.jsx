@@ -109,6 +109,11 @@ const Dashboard = () => {
                     <FaListAlt /> Manage Products
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to="manageSellerReq">
+                    <FaListAlt /> Seller Requests
+                  </NavLink>
+                </li>
               </>
             )}
           </ul>

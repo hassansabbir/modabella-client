@@ -19,6 +19,7 @@ import Children from "../Pages/Children/Children";
 import MyAddedProducts from "../Pages/Dashboard/MyAddedProducts/MyAddedProducts";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import About from "../Pages/About/About";
+import ManageSellerReq from "../Pages/Dashboard/ManageSellerReq/ManageSellerReq";
 
 export const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ export const router = createBrowserRouter([
       {
         path: "manageProducts",
         element: <ManageProducts></ManageProducts>,
+      },
+      {
+        path: "manageSellerReq",
+        element: <ManageSellerReq />,
       },
       {
         path: "payment",
