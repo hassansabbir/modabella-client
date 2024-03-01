@@ -81,6 +81,11 @@ const Dashboard = () => {
                     <FaMoneyBillAlt /> Payment History
                   </NavLink>
                 </li>
+                <li className="mt-10">
+                  <NavLink to="beASeller">
+                    <FaMoneyBillAlt /> Be A Seller
+                  </NavLink>
+                </li>
               </>
             )}
             {isSeller.seller && (

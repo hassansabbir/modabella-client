@@ -20,6 +20,7 @@ import MyAddedProducts from "../Pages/Dashboard/MyAddedProducts/MyAddedProducts"
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import About from "../Pages/About/About";
 import ManageSellerReq from "../Pages/Dashboard/ManageSellerReq/ManageSellerReq";
+import BeASeller from "../Pages/Dashboard/BeASeller/BeASeller";
 
 export const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ export const router = createBrowserRouter([
       {
         path: "paymentHistory",
         element: <PaymentHistory></PaymentHistory>,
+      },
+      {
+        path: "beASeller",
+        element: <BeASeller />,
       },
       {
         path: "addAProduct",
