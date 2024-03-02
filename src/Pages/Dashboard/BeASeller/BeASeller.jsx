@@ -16,18 +16,33 @@ const BeASeller = () => {
           with customers around the world.
         </p>
 
-        <div className="mt-20">
+        <div className="mt-20 bg-red-100 p-10 rounded-3xl shadow-md">
           <h2 className="text-4xl my-5">Why Sell on ModaBella?</h2>
-          <ul>
+          <ol>
             <li>
-              Global Reach: Reach customers beyond borders and tap into new
-              markets.
+              * <span className="font-bold">Global Reach:</span> Reach customers
+              beyond borders and tap into new markets.
             </li>
             <li>
-              User-Friendly Platform: Easily manage your products, inventory,
-              and orders through our intuitive seller dashboard.
+              * <span className="font-bold">User-Friendly Platform:</span>{" "}
+              Easily manage your products, inventory, and orders through our
+              intuitive seller dashboard.
             </li>
-          </ul>
+            <li>
+              * <span className="font-bold">Secure Transactions:</span> Benefit
+              from a secure and reliable payment system for seamless
+              transactions.
+            </li>
+            <li>
+              * <span className="font-bold">Marketing Support:</span> Leverage
+              our marketing channels to boost your visibility and sales.
+            </li>
+            <li>
+              * <span className="font-bold">Customer Trust:</span> Join a
+              platform known for its commitment to quality and customer
+              satisfaction.
+            </li>
+          </ol>
         </div>
       </div>
     </div>
