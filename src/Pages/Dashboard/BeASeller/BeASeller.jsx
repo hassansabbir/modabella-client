@@ -7,7 +7,7 @@ const BeASeller = () => {
       <h2 className="text-3xl text-center">
         Welcome to ModaBella - Your Gateway to E-Commerce Success!
       </h2>
-      <div className="mt-20  px-52">
+      <div className="mt-20 px-52">
         <p className="text-xl text-center">
           Are you passionate about your products or services and eager to
           showcase them to a global audience? Become a seller on [Website Name]
@@ -44,6 +44,11 @@ const BeASeller = () => {
               satisfaction.
             </li>
           </ul>
+        </div>
+        <div className="my-10 text-center">
+          <button className="btn btn-outline shadow-xl">
+            Send A Seller Request
+          </button>
         </div>
       </div>
     </div>
