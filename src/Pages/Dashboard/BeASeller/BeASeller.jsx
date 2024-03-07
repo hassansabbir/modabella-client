@@ -1,5 +1,5 @@
 import { useContext } from "react";
-
+import clickSideImage from "../../../assets/click-here-side-image.png";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
@@ -86,13 +86,14 @@ const BeASeller = () => {
             </li>
           </ul>
         </div>
-        <div className="my-10 text-center">
+        <div className="my-10 flex justify-center gap-10 text-center">
           <button
             onClick={() => sendSellerReq(user)}
-            className="btn btn-outline shadow-xl"
+            className="btn btn-outline mt-24 shadow-xl"
           >
             Send A Seller Request
           </button>
+          <img className="w-64" src={clickSideImage} alt="" />
         </div>
       </div>
     </div>
