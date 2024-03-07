@@ -1,4 +1,45 @@
+import { useContext } from "react";
+
+import Swal from "sweetalert2";
+import { AuthContext } from "../../../Providers/AuthProvider";
+
 const BeASeller = () => {
+  const { user } = useContext(AuthContext);
+  const sendSellerReq = (user) => {
+    fetch(`${import.meta.env.VITE_SERVER_API}/users/sellerReq`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: user.email }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          Swal.fire({
+            title: `Seller Request Sent To An Admin.`,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+          });
+        } else {
+          Swal.fire({
+            title: `${data?.message}`,
+            showClass: {
+              popup: "animate__animated animate__fadeInDown",
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp",
+            },
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <h2 className="text-5xl font-display text-center my-5 font-semibold">
@@ -10,8 +51,8 @@ const BeASeller = () => {
       <div className="mt-20 px-52">
         <p className="text-xl text-center">
           Are you passionate about your products or services and eager to
-          showcase them to a global audience? Become a seller on [Website Name]
-          and unlock the potential to grow your business like never before! Our
+          showcase them to a global audience? Become a seller on Modabella and
+          unlock the potential to grow your business like never before! Our
           platform empowers entrepreneurs, artisans, and businesses to connect
           with customers around the world.
         </p>
@@ -46,7 +87,10 @@ const BeASeller = () => {
           </ul>
         </div>
         <div className="my-10 text-center">
-          <button className="btn btn-outline shadow-xl">
+          <button
+            onClick={() => sendSellerReq(user)}
+            className="btn btn-outline shadow-xl"
+          >
             Send A Seller Request
           </button>
         </div>

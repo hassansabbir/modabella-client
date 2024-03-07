@@ -22,6 +22,7 @@ const SocialLogin = () => {
           email: loggedInUser.email,
           image: loggedInUser.photoURL,
           role: "customer",
+          isSellerRequestOn: false,
         };
         fetch(`${import.meta.env.VITE_SERVER_API}/users`, {
           method: "POST",

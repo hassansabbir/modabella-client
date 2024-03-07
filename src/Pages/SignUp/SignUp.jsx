@@ -31,6 +31,7 @@ const SignUp = () => {
             image: data.photoUrl,
             email: data.email,
             role: "customer",
+            isSellerRequestOn: false,
           };
           fetch(`${import.meta.env.VITE_SERVER_API}/users`, {
             method: "POST",
