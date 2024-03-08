@@ -46,7 +46,7 @@ const BeASeller = () => {
         Be A Seller
       </h2>
       <h2 className="text-3xl text-center">
-        Welcome to ModaBella - Your Gateway to E-Commerce Success!
+        Welcome to ModaBella - Your Gateway to E-Commerce Success!!
       </h2>
       <div className="mt-20 px-52">
         <p className="text-xl text-center">
