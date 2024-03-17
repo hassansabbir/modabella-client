@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   const [carts, refetch] = useCart();
-  console.log(carts);
+  // console.log(carts);
 
   const total = Number(
     carts.reduce((sum, item) => item.price + sum, 0).toFixed(2)

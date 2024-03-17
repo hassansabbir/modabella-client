@@ -21,7 +21,7 @@ const Dashboard = () => {
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isCustomer, isCustomerLoading] = useCustomer();
   const [isSeller, isSellerLoading] = useSeller();
-  console.log(isAdmin, isCustomer, isSeller);
+  // console.log(isAdmin, isCustomer, isSeller);
   if (isAdminLoading || isCustomerLoading || isSellerLoading) {
     return (
       <div className="flex justify-center mt-72">

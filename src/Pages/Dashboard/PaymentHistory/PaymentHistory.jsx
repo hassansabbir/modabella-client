@@ -12,7 +12,7 @@ const PaymentHistory = () => {
       .get(`${import.meta.env.VITE_SERVER_API}/myPayments/${user?.email}`)
       .then((data) => setPayments(data.data));
   }, [user?.email]);
-  console.log(payments);
+  // console.log(payments);
 
   return (
     <div className="max-w-7xl ">

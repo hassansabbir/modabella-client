@@ -22,10 +22,10 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     signIn(data.email, data.password).then((res) => {
       const user = res.user;
-      console.log(user);
+      console.log("User Name =>", user?.displayName);
       reset();
       Swal.fire({
         position: "top-end",

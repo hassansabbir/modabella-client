@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 const MyAddedProducts = () => {
   const { user } = useContext(AuthContext);
-  console.log(user.email);
+  // console.log(user.email);
 
   const { data: products = [] } = useQuery(["products"], async () => {
     const res = await fetch(
@@ -14,7 +14,7 @@ const MyAddedProducts = () => {
     );
     return res.json();
   });
-  console.log(products);
+  // console.log(products);
 
   return (
     <div className="max-w-7xl">

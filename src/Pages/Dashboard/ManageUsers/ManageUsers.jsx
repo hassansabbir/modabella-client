@@ -7,7 +7,7 @@ const ManageUsers = () => {
     const res = await fetch(`${import.meta.env.VITE_SERVER_API}/users`);
     return res.json();
   });
-  console.log(users);
+  // console.log(users);
 
   const handleMakeAdmin = (user) => {
     fetch(`${import.meta.env.VITE_SERVER_API}/users/admin/${user._id}`, {

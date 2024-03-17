@@ -12,7 +12,7 @@ const MyProducts = () => {
       .get(`${import.meta.env.VITE_SERVER_API}/myPayments/${user?.email}`)
       .then((data) => setMyPurchased(data.data));
   }, [user?.email]);
-  console.log(myPurchased);
+  // console.log(myPurchased);
 
   return (
     <div className="w-full">

@@ -15,7 +15,7 @@ const BeASeller = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success) {
           Swal.fire({
             title: `Seller Request Sent To An Admin.`,
