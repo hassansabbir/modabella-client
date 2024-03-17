@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import moment from "moment";
 
 const MyProducts = () => {
   const { user } = useContext(AuthContext);
@@ -25,14 +26,29 @@ const MyProducts = () => {
         {myPurchased.map((item) => (
           <div key={item._id} className="card w-80 bg-base-100 shadow-xl">
             <div className="card-body items-center text-center">
-              <h2 className="card-title">Items: {item.items}</h2>
-              <p>Transaction Id: {item.transactionId}</p>
-              <p>
-                Status:{" "}
-                <span className="bg-green-300 p-1 rounded-lg">
-                  {item.status}
-                </span>
-              </p>
+              <h2 className="card-title">{moment(item.date).format("LL")}</h2>
+              <div className="text-left my-5">
+                <p>
+                  <span className="font-extrabold text-lg">Total Item:</span>{" "}
+                  {item?.items?.length}
+                </p>
+                <p>
+                  <span className="font-extrabold text-lg">Total Price:</span> $
+                  {item?.price}
+                </p>
+                <p>
+                  <span className="font-extrabold text-lg">
+                    Transaction Id:
+                  </span>{" "}
+                  {item.transactionId}
+                </p>
+                <p>
+                  <span className="font-extrabold text-lg">Status:</span>
+                  <span className="bg-green-300 p-1 rounded-lg">
+                    {item.status}
+                  </span>
+                </p>
+              </div>
               <div className="card-actions">
                 <button className="btn btn-neutral">view Details</button>
               </div>
