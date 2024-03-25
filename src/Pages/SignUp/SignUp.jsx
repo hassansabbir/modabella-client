@@ -148,7 +148,7 @@ const SignUp = () => {
                     maxLength: 20,
                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                   })}
-                  type="text"
+                  type="password"
                   placeholder="password"
                   className="input input-bordered"
                 />
