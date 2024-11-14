@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useCustomer from "../hooks/useCustomer";
 import useSeller from "../hooks/useSeller";
 import useAdmin from "../hooks/useAdmin";
-import { Vortex } from "react-loader-spinner";
+// import { Vortex } from "react-loader-spinner";
 // import { useContext } from "react";
 // import { AuthContext } from "../Providers/AuthProvider";
 import {
@@ -25,15 +25,7 @@ const Dashboard = () => {
   if (isAdminLoading || isCustomerLoading || isSellerLoading) {
     return (
       <div className="flex justify-center mt-72">
-        <Vortex
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="vortex-loading"
-          wrapperStyle={{}}
-          wrapperClass="vortex-wrapper"
-          colors={["red", "green", "blue", "yellow", "orange", "purple"]}
-        />
+        <span className="loading loading-dots loading-lg"></span>
       </div>
     );
   }

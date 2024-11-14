@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
 import useSeller from "../../hooks/useSeller";
 import useCustomer from "../../hooks/useCustomer";
-import { Vortex } from "react-loader-spinner";
+// import { Vortex } from "react-loader-spinner";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,15 +16,7 @@ const Navbar = () => {
   if (isAdminLoading || isSellerLoading || isCustomerLoading) {
     return (
       <div className="flex bg-white justify-center mt-72">
-        <Vortex
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="vortex-loading"
-          wrapperStyle={{}}
-          wrapperClass="vortex-wrapper"
-          colors={["red", "green", "blue", "yellow", "orange", "purple"]}
-        />
+        <span className="loading loading-dots loading-lg"></span>
       </div>
     );
   }
